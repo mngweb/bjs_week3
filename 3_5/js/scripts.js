@@ -23,12 +23,12 @@ getPage(); // zwraca null
 
         var search = window.location.search,
             searchValue = null,
-            regexp = new RegExp();     /* ZADANIE NIEDOKOŃCZONE */
+            regexp = new RegExp("\\?page=(\\d+)", "ig"),     /* ZADANIE NIEDOKOŃCZONE */
             pageNumber;
             
         searchValue = regexp.exec(search);
 
-        if(pageNumber === "" || isNaN(pageNumber)){
+        if(pageNumber){
             return null;
         }
         else{
