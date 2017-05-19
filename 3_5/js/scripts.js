@@ -22,22 +22,14 @@ getPage(); // zwraca null
     function getPage() { 
 
         var search = window.location.search,
-            searchValue = null,
-            regexp = new RegExp("\\?page=(\\d+)", "ig"),     /* ZADANIE NIEDOKOŃCZONE */
+            regexp = new RegExp("page=(\\d+)", "ig"),
             pageNumber;
             
-        searchValue = regexp.exec(search);
+        pageNumber = regexp.exec(search);
 
-        if(pageNumber){
-            return null;
-        }
-        else{
-            return searchValue[1];
-        }
+        return pageNumber && pageNumber[1] ? parseInt(pageNumber[1]) : null; 
         
     }
-
-
 
 
     // dla adresu np. http://localhost/test/?page=2
