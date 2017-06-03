@@ -37,7 +37,6 @@ Jako adres URL, z którego pobierane bedą dane, możesz wykorzytać https://jso
         xhr.open("GET", url, true);
 
 
-    //2 wersje z chyba tym samym efektem:
     //WERSJA 1:
         xhr.onload = function(e) {
             if (this.status === 200) {
