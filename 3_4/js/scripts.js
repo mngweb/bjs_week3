@@ -46,7 +46,6 @@ dopiero wtedy przekaż jako parametr data do funkcji callback.
         xhr.setRequestHeader('Accept', 'application/json')
 
 
-    //2 wersje z chyba tym samym efektem:
     //WERSJA 1:
         xhr.onload = function(e) {
 
